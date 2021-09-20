@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Coding Quiz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,22 +10,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-10">
-                <a href="">View Highscores</a>
+                <a href="./scores.html">View Scores</a>
             </div>
             <div class="col-2">
-                <h4 id='timer'>timer: 0</h4>
+                <h4 id='timer'>60</h4>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">            
+    <div id='quiz-container' class="container">
+        <div class="row">
 
             <div id="quiz" class="col-8 offset-2 text-center">
                 <h1>Code Quiz Challenge</h1>
@@ -34,54 +35,27 @@
                     answer will receive a score/time penalty.</p>
                 <button id='btn-start' class="btn btn-info btn-lg">Start Quiz</button>
             </div>
-            <div id="question1" class="col-8 offset-2 text-center d-none">
-                <h1>Question #1</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn1' class="btn btn-info btn-lg">Submit</button>
+            <div id="questions" class="col-8 offset-2 text-center d-none">
+                <p id="question-statement"></p>
+                <div class="container">
+                    <div id="answers" class='column'>
+                    </div>
+                </div>
             </div>
-            <div id="question2" class="col-8 offset-2 text-center d-none">
-                <h1>Question #2</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn2' class="btn btn-info btn-lg">Submit</button>
+
+            <div id="final-page" class="col-8 offset-2 text-center d-none">
+                <h1>All Finished!</h1>
+                <p>Your final score is: <span id='final-score'></span></p>
+                <label for="">Enter name to save score:</label>
+                <input type="text" id="score-name"><br>
+                <button id='btn-end' class="btn btn-info btn-lg">Submit</button>
             </div>
-            <div id="question3" class="col-8 offset-2 text-center d-none">
-                <h1>Question #3</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn3' class="btn btn-info btn-lg">Submit</button>
-            </div>
-            <div id="question4" class="col-8 offset-2 text-center d-none">
-                <h1>Question #4</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn4' class="btn btn-info btn-lg">Submit</button>
-            </div>
-            <div id="question5" class="col-8 offset-2 text-center d-none">
-                <h1>Question #5</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn5' class="btn btn-info btn-lg">Submit</button>
-            </div>
-            <div id="final-score" class="col-8 offset-2 text-center d-none">
-                <h1>Question #5</h1>
-                <p>When ready, click the button "Start Quiz."
-                    A timed code-related quiz will start. Every incorrect
-                    answer will receive a score/time penalty.</p>
-                <button id='btn-end' class="btn btn-info btn-lg">End Quiz</button>
-            </div>             
+            <div id="message"></div>
         </div>
     </div>
 
-<script src="./src/js/index.js"></script>
+    <script src="./src/js/script.js"></script>
 
 </body>
 
 </html>
-
