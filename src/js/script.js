@@ -137,3 +137,5 @@ btnEnd.addEventListener('click', saveScore);
 
 btnStart.addEventListener('click', startQuiz);
 
+
+
