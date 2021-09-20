@@ -115,7 +115,7 @@ function endQuiz() {
     finalScore.textContent = time;
 }
 
-function saveHighscore() {
+function saveScore() {
     var scoreName = scoreNameEl.value;    
 
     if (scoreName !== "") {
@@ -128,12 +128,12 @@ function saveHighscore() {
 
         scores.push(score);
         localStorage.setItem("scores", JSON.stringify(scores));
-        location.href = 'highscores.html';
+        location.href = 'scores.html';
        
     }
 }
 
-btnEnd.addEventListener('click', saveHighscore);
+btnEnd.addEventListener('click', saveScore);
 
 btnStart.addEventListener('click', startQuiz);
 
