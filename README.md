@@ -11,6 +11,7 @@
 
   ## Website:
   https://github.com/johnrip89/Code-Quiz/
+  https://johnrip89.github.io/Code-Quiz/
 
   ## Contribution:
   Made by John Ripplinger
